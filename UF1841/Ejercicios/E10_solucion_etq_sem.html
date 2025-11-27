@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso Práctico Semántica HTML5</title>
+</head>
+<body>
+
+    <!-- CABECERA DEL SITIO WEB -->
+    <header>
+        <h1>Revista Digital: Fundamentos del Desarrollo Web</h1>
+        <p>Un recurso para aprender a maquetar con sentido.</p>
+        
+        <!-- NAVEGACIÓN PRINCIPAL -->
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/guias">Guías</a></li>
+                <li><a href="#contacto-final">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL Y ÚNICO DE LA PÁGINA -->
+    <main>
+        <h2>Artículo Central: La Importancia de la Estructura</h2>
+        
+        <!-- 
+            ARTÍCULO INDEPENDIENTE: Una publicación de blog completa.
+            Contiene cabecera, secciones de contenido, y pie de artículo.
+        -->
+        <article>
+            <header>
+                <h3>Diseño Web Moderno con Etiquetas HTML5</h3>
+                <p>Publicado por el Experto Semántico el 26 de Noviembre de 2025.</p>
+            </header>
+            
+            <!-- SECCIÓN 1: Introducción e Imagen -->
+            <section>
+                <h4>¿Por qué usar &lt;section&gt; en lugar de &lt;div&gt;?</h4>
+                <p>La adopción de las etiquetas semánticas de HTML5 es crucial para la accesibilidad y el SEO. Un sitio bien estructurado permite a los motores de búsqueda entender la jerarquía del contenido de manera más eficiente que un sitio basado únicamente en &lt;div&gt;.</p>
+                
+                <!-- Uso de la etiqueta <img> (Imagen) -->
+                <p>
+                    <img 
+                        src="https://placehold.co/400x200/4CAF50/FFFFFF?text=HTML5+STRUCTURE" 
+                        alt="Diagrama de estructura web usando etiquetas HTML5 semánticas"
+                        width="400"
+                        height="200"
+                    >
+                </p>
+                <p>La imagen ilustra cómo organizamos el contenido principal del documento.</p>
+            </section>
+            
+            <!-- SECCIÓN 2: Lista Ordenada de Buenas Prácticas -->
+            <section>
+                <h4>Buenas Prácticas de Maquetación</h4>
+                <p>Sigue esta lista ordenada para asegurar una correcta implementación:</p>
+                
+                <!-- Uso de la lista ordenada <ol> -->
+                <ol>
+                    <li>Usar siempre &lt;h1&gt; una sola vez por página.</li>
+                    <li>Incluir un solo &lt;main&gt; por documento.</li>
+                    <li>Asegurar que &lt;article&gt; sea un contenido que se sostiene por sí mismo.</li>
+                    <li>Utilizar `alt` en todas las imágenes.</li>
+                </ol>
+            </section>
+            
+            <!-- PIE DEL ARTÍCULO -->
+            <footer>
+                <p>Puedes dejar tus comentarios en la sección inferior de la página.</p>
+            </footer>
+        </article>
+
+        <!-- SECCIÓN DE COMENTARIOS (Otro bloque temático principal) -->
+        <section>
+            <h2>Comentarios de Lectores</h2>
+            
+            <!-- Uso de la lista no ordenada <ul> -->
+            <ul>
+                <li>
+                    <p><strong>Usuario123:</strong> Gran artículo, me ayudó a entender la diferencia entre &lt;section&gt; y &lt;article&gt;.</p>
+                </li>
+                <li>
+                    <p><strong>DevJunior:</strong> ¿Podrían hacer una guía sobre el &lt;figure&gt; y &lt;figcaption&gt;?</p>
+                </li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <!-- 
+        BARRA LATERAL (ASIDE): Contenido relacionado pero tangencial al artículo.
+        Aquí mostramos enlaces relacionados y un bloque de anuncios.
+    -->
+    <aside>
+        <h3>Otros Contenidos de Interés</h3>
+        
+        <nav>
+            <p>Guías:</p>
+            <ul>
+                <li><a href="#">Guía de Tablas Semánticas</a></li>
+                <li><a href="#">Guía de Imágenes Responsivas</a></li>
+            </ul>
+        </nav>
+        
+        <section>
+            <h4>Publicidad</h4>
+            <p>Banner aquí (simulado con texto)</p>
+        </section>
+    </aside>
+    <hr>
+    <!-- PIE DE PÁGINA DEL SITIO WEB -->
+    <footer id="contacto-final">
+        <p>Copyright &copy; 2025 Revista Semántica.</p>
+        <p>Contacta con nosotros: <a href="mailto:info@revista.com">info@revista.com</a></p>
+        <a href="#">Volver Arriba</a>
+    </footer>
+
+</body>
+</html>
