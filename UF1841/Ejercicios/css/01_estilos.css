@@ -1,0 +1,22 @@
+/* Selectores */
+
+/* selector de elemento*/
+
+h3{
+    font-size: 25px;
+    color: rgb(44, 191, 224);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* selectores por id */
+#inicio{
+    font-size:  44px;
+    text-align: right;
+}
+
+/* Selectores genéricos */
+
+.general{
+    color:tomato;
+    text-decoration: underline;
+}
