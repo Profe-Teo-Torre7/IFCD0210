@@ -5,18 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Herencia en CSS</title>
     <style>
-        *{
-            font-family: 'Courier New', Courier, monospace;
-        }
         footer{
+            font-family: 'Courier New',arial, Courier, monospace;
             color:tomato;
         }
+
+        li,p,header{
+            background-color: aquamarine;
+        }
+        .cabecera{
+            background-color: lightgrey;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 80px;
+            text-align: center;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+        p span{
+            font-size: 40px;
+            color: brown;
+        }
+        
+        .verde{
+            color: green;
+            background-color: antiquewhite;
+            font-size: 55px;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Herencia en CSS</h1>
+    <h1>Herencia en <span class="verde">CSS</span></h1>
+    <header class="cabecera">
+        HEADER
+    </header>
     <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem enim praesentium molestiae dolorum nam, animi, exercitationem aliquid aut magnam dignissimos delectus consequatur accusantium quis maiores nesciunt dicta amet blanditiis! Quibusdam?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+        <p>
+            <p>
+                <span>Texto Span</span>
+            </p>
+        </p>
+        
     </p>
     <footer >
         <h3 style="color: blue;">Esto es el título del pie</h3>
