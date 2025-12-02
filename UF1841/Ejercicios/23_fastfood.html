@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastfood</title>
+    <style>
+        body {
+            color: #04b6e7;
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+
+            border: 2px solid white;
+            background-color:#e7b004;
+            border-radius: 10px;
+
+        } 
+        .contenedor {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+
+            width: 80%;
+            height: 800px;
+            margin: 0 auto;
+            background-color: #2e1b05;
+            padding: 20px;
+
+        }
+        .uno{
+            background-image: url("img/1.png");
+            background-size: cover;
+            
+
+        }
+        .dos{
+             background-image: url("img/2.png");
+             background-size: cover;
+        }
+        .tres{
+            grid-column: 3 / span 2;
+            background-image: url("img/3.png");
+            background-size: cover; 
+            background-position-x:right;
+            background-position-y: top;
+        }
+        .cuatro{
+            grid-row: 2 / span 2; 
+            background-image: url("img/4.png");
+        }
+        .cinco{
+            background-image: url("img/5.png");
+        }
+        .cinco, .siete{
+            grid-column: 2 / span 2;
+
+        }
+        .seis{
+            background-image: url("img/6.png");
+        }
+        .siete{
+            background-image: url("img/7.png");
+        }
+        .ocho{
+            background-image: url("img/8.png");
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="uno">
+            Hola caracola
+        </div>
+        <div class="dos"></div>
+        <div class="tres">
+        </div>
+        <div class="cuatro"></div>
+        <div class="cinco"></div>
+        <div class="seis"></div>
+        <div class="siete"></div>
+        <div class="ocho"></div>
+    </div>
+</body>
+
+</html>
