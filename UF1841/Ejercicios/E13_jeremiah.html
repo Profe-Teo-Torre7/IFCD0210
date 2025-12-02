@@ -6,56 +6,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeremiah Michael F Kelly</title>
     <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
         header {
             /* height:200px; 
             border: 1px solid blue;*/
+            background-color: #B35D4D;
+
         }
 
         nav {
             /* height: 80px; 
             border: 1px solid red;*/
+            background-color: #D3BCB0;
+
 
         }
 
         nav ul {
             list-style-type: none;
-            padding: 0;
+            padding:10px;
         }
 
         nav ul li {
             display: inline-block;
-            padding-right: 10px;
+            padding: 6px;
         }
 
         nav ul li a {
             text-decoration: none;
+            color: black;
         }
-        main{
-            background-color: bisque;
+
+        main {
+            background-color: rgb(230, 233, 238);
         }
-        .contenido{
-            background-color: cornflowerblue;
-            margin:0 auto;
+        .titular{
+
+            height:135px;
+            padding-top:40px;
+            padding-left: 20px;
+            color:white;
+        }
+        .titular p{
+            margin-top:30px;
+            font-size: large;
+        }
+
+        .contenido {
+            background-color: rgb(255, 255, 255);
+            margin: 0 auto;
             width: 80%;
             padding-left: 15px;
             padding-top: 20px;
         }
-        footer{
+        .contenido li{
+            line-height: 2;;
+        }
+        .contenido ul{
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+
+
+        h2{
+            padding-top:30px;
+            padding-bottom:15px;
+        }
+        .texto{
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .puestos{
+            line-height: 1.5;
+            font-weight: bold;
+        }
+
+        footer {
             height: 100px;
-            background-color: aquamarine;
+            background-color: #8B858A;
             padding-top: 10px;
         }
-        footer p{
+
+        footer p {
 
             text-align: center;
+            color:white;
+            margin-top:20px;
+            font-size: larger;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Jeremiah Michael F Kelly</h1>
-        <p>Founder | Optometrist & Neurocientist</p>
+        <div class="titular">
+            <h1>Jeremiah Michael F Kelly</h1>
+            <p>Founder | Optometrist & Neurocientist</p>
+        </div>
+
         <nav>
             <ul>
                 <li><a href="#about">About </a></li>
@@ -69,49 +121,67 @@
     <main>
         <div class=" contenido">
             <h2 id="about">About Me</h2>
+            <p class="texto">
             Optometrist and Research scientist with expertise in optometry, neuroscience, and mathematical modeling of
-            vision science.
+            vision science.</p>
 
-            I'm trying to renovate a house in Abruzzo, Italy. I enjoy messing about with two old cars. Keeper of
-            chickens, dogs and cats.
+            <p class="texto"></p>
+            I'm trying to renovate a house in <a href="">Abruzzo</a>, Italy. I enjoy messing about with two old cars. Keeper of
+            chickens, dogs and cats.</p>
 
             <h2 id="research">Research Interests</h2>
-
-            Rod photoreceptor function and dark adaptation.
-            RAG and LLM evidence based summaries. NLP and ML
-            Mathematical models in vision science.
-            Optometry and ophthalmology innovations.
+            <ul>
+                <li>Rod photoreceptor function and dark adaptation.</li>
+                <li>RAG and LLM evidence based summaries. NLP and ML</li>
+                <li>Mathematical models in vision science.</li>
+                <li>Optometry and ophthalmology innovations.</li>
+            </ul>
 
             <h2 id="experience">Professional Experience</h2>
+
+            <p class="puestos">Founder and Director <a href="">Mumac Ltd</a> (2018 - Present)</p>
+            <ul>
+                <li>Developing the Rapida dark adaptometer.</li>
+                <li>Patent author <a href="">US Patent 11559200</a> - 2023</li>
+            </ul>
             
-            Founder and Director Mumac Ltd (2018 - Present)
-
-            Developing the Rapida dark adaptometer.
-            Patent author US Patent 11559200 - 2023
-            Founder and Director Emqueue Ltd (2024 - Present)
-
-            Investigating the utility of LLM in summarising scientific literature
-
-            NIHR Research Associate University of Manchester (2013 - 2016)
-
-            Leading studies on early diagnosis of Age-Related Macular Degeneration.
-            Clinical trial No: NCT02090751 Development of a Device to Measure Dark Adaptation
-            Research Optometrist, University of Manchester (2008 - Present)
-
-            Developing algorithms for rod function analysis, colour vision theory, and instructing MSc & PhD students.
             
+            <p class="puestos">Founder and Director <a href="">Emqueue Ltd</a> (2024 - Present)</p>
+
+            <ul>
+                <li>Investigating the utility of LLM in summarising scientific literature</li>
+            </ul>        
+
+            <p class="puestos">NIHR Research Associate University of Manchester (2013 - 2016)</p>
+
+            <ul>
+                <li>Leading studies on early diagnosis of Age-Related Macular Degeneration.</li>
+                <li>Clinical trial No: NCT02090751 <a href="">Development of a Device to Measure Dark Adaptation</a></li>
+            </ul>
+            
+            <p class="puestos">Research Optometrist, University of Manchester (2008 - Present)</p>
+
+            <p class="texto">Developing algorithms for rod function analysis, colour vision theory, and instructing MSc & PhD students.</p>
+
             <h2 id="publications">Publications</h2>
-            
-            Selected research papers in vision science, optometry, and medical imaging.
 
-            The role of dark adaptation in understanding early AMD - Progress in Retinal and Eye Research, 2022.
-            Dynamic contact angle analysis of silicone hydrogel contact lenses - Journal of biomaterials applications,
-            2011.
-            <h2 id="contact">Contact</h2>
+            Selected research papers in vision science, optometry, and medical imaging.
+            <ul>
+                <li><a href=""><b>The role of dark adaptation in understanding early AMD</b></a> - Progress in Retinal and Eye Research, 2022.</li>
+                <li><a href=""><b>Dynamic contact angle analysis of silicone hydrogel contact lenses</b></a> - Journal of biomaterials applications, 2011.</li>
+            </ul>
+
             
-            Email: emkayoh@mac.com
-            Bluesky: emkayoh.bsky.social
-            LinkedIn: Jeremiah
+            
+            <h2 id="contact">Contact</h2>
+            <ul>
+                <li>Email: emkayoh@mac.com</li>
+                <li>Bluesky: emkayoh.bsky.social</li>
+                <li>LinkedIn: Jeremiah</li>
+            </ul>
+            
+            
+            
         </div>
     </main>
     <footer>
