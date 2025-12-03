@@ -80,3 +80,56 @@ h1 {
     width: 49%;
     line-height: 2;
 }
+/* Página de índice del Blog */
+.post{
+    border-width:3px 0;
+    margin-bottom: 50px;
+}
+.fecha{
+    font-size: 25px;
+    color:gray;
+    line-height: 2;
+}
+.titulo-post{
+    font-size: 27px;
+    margin-bottom: 10px;
+
+}
+.titulo-post a{
+    color: black;
+    text-decoration: none;
+}
+.titulo-post a:hover{
+    text-decoration: underline;
+}
+.extracto{
+    font-size: 20px;
+    line-height: 1.5;
+}
+/* Página de About */
+
+.burro{
+    border: 10px solid red;
+    background-color: blue;
+    background-image: url("../img/sandia.png");
+    background-size: contain;
+    background-position: center;   
+
+}
+
+/*----------------------------------*/
+.esquinas{
+    width: 400px;
+    height: 400px;
+    background-color: darkorange;
+    border:5px solid blue ;
+    /* border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px; */
+    background-image: url("../img/burro_2.jpg");
+    background-position: right;
+    border-radius: 100px;
+    /* corner-shape:notch; */
+    /* corner-shape:scoop; */
+    /* corner-shape:bevel; */
+    /* corner-shape:superellipse(0.3); */
+}
