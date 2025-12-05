@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .flotar {
+            /* height: 200px; 
+            width: 200px;*/
+            border: 1px solid blue;
+            margin: 10px;
+            background-color: rgb(177, 242, 244);
+            font-size: 30px;
+            /* overflow: scroll; */
+
+            float: left;
+        }
+
+        .normal {
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        .normal1 {
+            height: 100px;
+            background-color: rgb(225, 243, 29);
+        }
+
+        .limpiar {
+            clear: both;
+        }
+        .contenedor{
+            width: 80%;
+            margin:0 auto;
+            border: 1px solid blue;
+            
+        }
+        .primera{
+            width: 22%;
+            margin-right: 5px;
+        }
+        .segunda{
+            width:50%;
+        }
+        .tercera{
+            width:22%;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="normal"></div>
+
+    <div class="contenedor">
+        <div class="flotar primera">1<br></div>
+        <div class="flotar segunda">2llllll</div>
+        <div class="flotar tercera">3lmlmlmlm</div>
+        <div class="limpiar"></div>
+    </div>
+
+
+    <div class="normal1"></div>
+
+
+
+</body>
+
+</html>

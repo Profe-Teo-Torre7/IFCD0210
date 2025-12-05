@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(90deg, rgba(214, 37, 99, 1) 0%, rgba(231, 100, 92, 1) 100%);
+        }
+
+        header,footer {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            background-color: black;
+        }
+
+        main {
+            box-sizing: border-box;
+            background-color: aliceblue;
+            padding: 2rem;
+            line-height: 1.5;
+            border-radius: 1rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            line-height: 1.8;
+            margin: 1.2rem;
+        }
+        footer{
+            color:aliceblue;
+            line-height: 2.5rem;
+        }
+
+
+        .centrado {
+            width: 80%;
+            margin: 0 auto;
+            /* border:1px solid rgb(228, 239, 26); */
+
+        }
+
+        .cabecera {
+
+            /* border:1px solid blue; */
+            height: 18vh;
+        }
+
+        .izq {
+            float: left;
+        }
+
+        .der {
+            float: right;
+        }
+
+        .limpiar {
+            clear: both;
+        }
+
+        .imagenes {
+            margin-top: 0.9rem;
+            width: 48%;
+            /* border:3px solid green;  */
+        }
+
+        .menu {
+            text-align: right;
+            padding-bottom: 1rem;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            padding-right: 0.8rem;
+
+        }
+
+        .titulo {
+            font-size: 2.7rem;
+            margin-bottom: 1rem;
+            color: aliceblue;
+            font-weight: bolder;
+        }
+
+        .centrar {
+            text-align: center;
+        }
+        .botones{
+            color:white;
+            background-color: black;
+            text-decoration: none;
+            border-radius: 0.8rem;
+            padding:0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="centrado">
+            <div class="cabecera"> <!--  Imágenes -->
+                <div class="imagenes izq">
+                    <a href="#"><img src="imagenes/microbit.svg" alt="Microbit"></a>
+                </div>
+                <div class="imagenes der">
+                    <a href="#"><img src="imagenes/developer.svg" alt="Developer"></a>
+                </div>
+            </div>
+            <nav class="limpiar">
+                <p class="menu">
+                    <a href="#">Software</a>&nbsp;
+                    <a href="#">Firmware</a>&nbsp;
+                    <a href="#">Hardware</a>&nbsp;
+                    <a href="#">Accessories</a>&nbsp;
+                    <a href="#">Community</a>&nbsp;
+                    <a href="#">R&D</a>&nbsp;
+                    <a href="#">Edit</a>
+
+                </p>
+            </nav>
+        </div>
+    </header>
+    <h1 class=" centrado titulo"> Welcome to the micro:bit developer community</h1>
+    <main class="centrado">
+        <h2>The micro:bit developer community site</h2>
+        <p>This site aims to sit between a community wiki and a technical datasheet for the micro:bit. The content is
+            available to edit on Github and is openly licensed through Creative Commons.</p>
+        <p>
+            The site is maintained by the Micro:bit Educational Foundation in order to document the hardware and
+            software that make the micro:bit work the way it does.</p>
+        <p>
+            We hope to encourage contributions into these projects in order to broaden our ecosystem and the range of
+            things people can invent with a micro:bit.</p>
+        <p>
+            The Micro:bit Educational Foundation aims to be a ‘responsible downstream’ to the many open source software
+            projects that are used to build the micro:bit: much like a good Linux distribution collates, tests,
+            stabilises and releases combinations of many diverse open source packages, the micro:bit Educational
+            Foundation and the micro:bit community present micro:bit users with a stable, tested release of all the
+            things you need to make the magical ‘end-to-end’ micro:bit experience.</p>
+
+        <h2>Latest news</h2>
+        <p>For the latest news and community updates, join our mailing list and Slack group.</p>
+
+        <div class="cabecera centrar"> <!--  Enlaces -->
+            <div class="imagenes izq">
+                <a class="botones" href="#">Educational Foundation</a>
+            </div>
+            <div class="imagenes der">
+                <a class="botones" href="#">Educational Foundation</a>
+            </div>
+        </div>
+        <div class="limpiar"></div>
+        <h2>Help us build it</h2>
+        <p>If you’d like to help us make the micro:bit better, then there are a number of ways that you can get involved.</p>
+
+        <h2>Code</h2>
+        <p>
+        Contribute features and fixes to one of the upstream projects that the micro:bit relies upon:</p>
+        <ul>
+            <li><a href="">The micro:bit Device Abstraction Layer (DAL/runtime)</a></li>
+            <li><a href="">The MakeCode Editor</a></li>
+            <li><a href="">The Python Editor</a></li>
+            <li><a href="">DAPlink</a></li>
+        </ul>
+        
+        
+        
+        <h2>Build</h2>
+        <p>
+        Help us build a brilliant hardware ecosystem around micro:bit - derivative boards, cool accessories and add ons,
+        or even suggestions for future versions of the micro:bit.</p>
+
+        The micro:bit schematic and reference design are good places to start for making your own projects
+        The accessories guide gives you an idea of what’s currently available.
+        Write
+        Improve the documentation and this site, either reporting issues or adding documentation will be extremely
+        helpful.
+        Help build a community around micro:bit - join the slack channel and Email list, share the things you’ve created
+        on twitter, blog about them!
+
+    </main>
+    <footer>
+        <div class="centrado">
+        <p>Terms of Use Privacy Safeguarding Support Newsletter microbit.org</p>
+        <p>© Copyright 2025 Micro:bit Educational Foundation</p>
+    </div>
+    </footer>
+</body>
+
+</html>
