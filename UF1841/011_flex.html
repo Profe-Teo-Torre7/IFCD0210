@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Flex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Fira Mono';
+            font-size: 25px;
+        }
+        .contenedor{
+            height: 100vh;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:center;
+            align-items:center;
+            gap: 130px;
+            flex-direction: column;
+
+        }
+        .item{
+            flex-grow:0;
+            /* flex-shrink: 1; */
+            
+            padding:10px;
+            background-color: aqua;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+     <!--   <div class="item">4</div>
+         <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>                 -->
+    </div>
+    <h1>Hola Fira Mono</h1>
+    <h2>Hola caracola</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, natus! Earum laborum minus, sint nostrum deserunt assumenda rerum possimus, officiis nesciunt, vero et. Vero ratione consequatur deleniti nemo voluptatum obcaecati.
+    </p>
+</body>
+</html>

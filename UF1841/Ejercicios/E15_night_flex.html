@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Hugo Nightfall</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        html {
+            font-size: 16px;
+            font-family: 'fira mono';
+        }
+        h1{
+            font-size: 3rem;
+            padding-bottom: 3rem;
+        }
+
+       nav a{
+            padding-right: 1rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.3rem;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        .principal a:hover {
+            text-decoration: underline;
+        }
+        .nav-cont {
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(170, 209, 209);
+            align-items: center;
+        }
+
+        .principal {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .principal a{
+            color:black;
+            text-decoration: none;
+            padding-right: 0.5rem;
+        }
+        .alto{
+            height: 10vh;
+        }
+        footer {
+            background-color: rgb(170, 209, 209);
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-cont alto">
+            <div><a href="">Logo</a></div>
+            <div>
+                <a href="">~/about</a>
+                <a href="">~/blog</a>
+            </div>
+        </nav>
+
+    </header>
+    <main class="principal">
+        <h1>Hugo Nightfall</h1>
+        <div>
+
+            <a href="">github</a>
+            <a href="">twitter</a>
+            <a href="">linkedin</a>
+            <a href="">email</a>
+        </div>
+
+    </main>
+    <footer class="alto">
+        © 2025 Hugo Nightfall, Built with Hugo and Nightfall theme
+    </footer>
+</body>
+
+</html>
