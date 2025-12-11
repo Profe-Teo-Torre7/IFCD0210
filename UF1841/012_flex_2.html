@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo_Douglas</title>
+    <style>
+        .contenedor{
+            height: 100vh;
+            display:flex;
+            /* flex-wrap: wrap; */
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            gap:30px;
+        }
+        .item{
+            padding:10px;
+            background-color: aquamarine;
+            border:2px solid blue;
+            flex-basis: 10%;
+            flex-grow: 1;
+        }
+        .doble{
+            flex-grow: 12;
+        }
+
+        header{
+            height: 10vh;
+            background-color: rgb(83, 242, 242);
+            display:flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        main{
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .pie{
+            height:10vh;
+            background-color:rgb(83, 242, 242);
+
+        }
+
+    </style>
+</head>
+<body >
+
+    <header>
+        <div>Logo </div>
+        <div>enlace1 enlace2 </div>
+    </header>
+    <main>
+        <h1>Texto gordo</h1>
+        <p>enlace1 enlace2 enlace3</p>
+    </main>
+    <footer class="pie">
+
+    </footer>
+
+
+
+</body>
+</html>

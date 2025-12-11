@@ -59,3 +59,58 @@
  .alto {
      height: 10vh;
  }
+
+ /* ABOUT */
+ .about-ppal,
+ .blog-ppal {
+     min-height: 80vh;
+     width: 60%;
+     margin: 3rem auto;
+ }
+
+ .fechas,
+ .post {
+     margin-top: 1.5rem;
+     background-color: rgb(170, 209, 209);
+     padding: 1.5rem 0.5rem;
+ }
+
+ .fechas p,
+ .post p {
+     line-height: 2;
+ }
+
+ .about-cont {
+     line-height: 1.5;
+ }
+
+ .about-cont p {
+     margin: 1.5rem 0;
+ }
+
+ .about-cont ul {
+     margin-left: 4rem;
+ }
+
+ .about-cont ul a,
+ .post a {
+     text-decoration: none;
+ }
+
+ /* BLOG */
+ .blog-ppal {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .post {
+     padding: 1.5rem;
+ }
+
+ .rtime {
+     padding-bottom: 1rem;
+ }
+ .titulo-post{
+    display:flex;
+    justify-content: space-between;
+ }
