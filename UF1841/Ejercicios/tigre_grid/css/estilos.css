@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+html{
+    font-size: 16px;
+}
+body{
+    font-family: Inter;
+    background-color: rgb(233, 233, 233);
+}
+img{
+    width:200px;
+    height: auto;
+    
+}
+h2{
+    padding:2rem 0;
+}
+.ancho{
+    max-width: 960px;
+    width:80%;
+    margin:0 auto;
+}
+.contenedor{
+    
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); */
+    gap:2.5rem;
+    /* grid-template-rows: repeat(5, 1fr); */
+
+}
+.contenedor div{
+    background-color: white; 
+    border-radius: 20px;
+    /*border:1px solid blue;*/
+    padding:1rem;
+    
+}
+/* Ancho 100% */
+.ancho_100{
+    grid-column: span 12;
+}
+.ancho_50{
+    grid-column: span 6;
+}
+.ancho_33{
+    grid-column: span 4;
+}
+.fila2{
+    grid-row-start: 2;
+}
+.fila3{
+    grid-row-start: 3;
+}
+.fila4{
+    grid-row-start: 4;
+}
+.fila5{
+    grid-row-start: 5;
+}
+.tigre{
+    display:flex;
+
+}
+.letras{
+    width:50%;
+}
+.letras, .tarjeta{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    line-height: 1.5;
+}
+.tarjeta img{
+    margin: 0 auto;
+}
