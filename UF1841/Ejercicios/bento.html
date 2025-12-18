@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Óscar G5</title>
+    <style>
+        main {
+            display: grid;
+            /* grid-template-columns: 30% 10% 10% 10% 10% 30%; */
+            grid-template-columns: 3fr 1fr 1fr 1fr 1fr 3fr;
+            grid-template-rows: 2fr 1fr 1fr 2fr;
+            height: 90vh;
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            gap: .5rem;            
+            border-radius: 1rem;
+            border: 1px solid red;
+            padding: 1rem;
+            /* box-sizing: border-box; */
+        }
+
+        div{
+            border-radius: 1rem;
+            border: 1px solid black;
+            width: 100%;
+            height: 100%;
+        }
+
+        .col2 {
+            grid-column: span 2;
+        }
+
+        .col3{
+            grid-column: span 3;
+        }
+
+        .col4{
+            grid-column: span 4;
+        }
+
+        .row2{
+            grid-row: span 2;
+        }
+
+        p {
+            padding-left: 1rem;
+        }        
+
+    </style>
+</head>
+<body>
+    <main>
+        <div><p>1</p></div>
+        <div class="col2"><p>2</p></div>
+        <div class="col2"><p>3</p></div>
+        <div class="row2"><p>4</p></div>
+        <div class="row2"><p>5</p></div>
+        <div class="row2 col4"><p>6</p></div>
+        <div class="row2"><p>7</p></div>
+        <div class="col2"><p>8</p></div>
+        <div class="col3"><p>9</p></div>
+    </main>
+    
+</body>
+</html>

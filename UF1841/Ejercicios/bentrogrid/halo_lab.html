@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halo Lab | bento</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: aliceblue;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        .contenedor {
+            width: 80%;
+            min-height: 80vh;
+            border-radius: 20px;
+            display: grid;
+            gap: 0.5rem;
+            grid-template-columns: repeat(12, 1fr);
+            /* grid-template-rows: 1fr 1fr 1fr; */
+            grid-template-areas:
+                "primera primera primera primera primera primera primera segunda segunda segunda segunda segunda"
+                "tercera tercera tercera cuarta cuarta cuarta cuarta quinta quinta quinta quinta quinta"
+                "sexta sexta sexta septima septima septima septima quinta quinta quinta quinta quinta";
+
+            background-color: black;
+            padding:1rem;
+
+        }
+
+        .grid-item {
+            /* height: 100%; */
+            border-radius: 20px;
+            /* border: 1px solid red; */
+            background-size: cov;
+            
+        }
+        .grid-item img{
+            height: 100%;
+            width:100%; 
+            border-radius: 20px;
+        }
+
+        .primera {
+            grid-area: primera;
+            /* background-image: url("img/primera.jpg"); */
+        }
+
+        .segunda {
+            grid-area: segunda;
+            /* background-image: url("img/segunda.jpg"); */
+        }
+
+        .tercera {
+            grid-area: tercera;
+            /* background-image: url("img/tercera.jpg"); */
+        }
+
+        .cuarta {
+            grid-area: cuarta;
+            /* background-image: url("img/cuerta.jpg"); */
+        }
+
+        .quinta {
+            grid-area: quinta;
+            /* background-image: url("img/quinta.jpg"); */
+        }
+
+        .sexta {
+            grid-area: sexta;
+            /* background-image: url("img/sexta.jpg"); */
+        }
+
+        .septima {
+            grid-area: septima;
+            /* background-image: url("img/septima.jpg"); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="grid-item primera">
+            <img src="img/primera.jpg" alt="">
+        </div>
+        <div class="grid-item segunda">
+            <img src="img/segunda.jpg" alt="">
+        </div>
+        <div class="grid-item tercera">
+            <img src="img/tercera.jpg" alt="">
+        </div>
+        <div class="grid-item cuarta">
+            <img src="img/cuerta.jpg" alt="">
+        </div>
+        <div class="grid-item quinta">
+            <img src="img/quinta.jpg" alt="">
+        </div>
+        <div class="grid-item sexta">
+            <img src="img/sexta.jpg" alt="">
+        </div>
+        <div class="grid-item septima">
+            <img src="img/septima.jpg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
