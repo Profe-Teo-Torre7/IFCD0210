@@ -33,24 +33,51 @@
             color:white;
             padding: 1rem;
         }
+        .relativa{
+            background-color: aqua;
+            position: relative;
+            /* top:300px;
+            left:300px; */
+        }
+        .absoluta{
+            background-color: rgb(181, 181, 238);
+            position:absolute;
+            top:50px;
+            left:50px;
+            z-index: 1;
+        }
+        .fijo{
+            background-color: green;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 2;
+        }
+        .sticky{
+            background-color: rgb(160, 158, 158);
+            position: sticky;
+            top:100px;
+
+        }
     </style>
 </head>
 <body>
- <div class="exterior">
-    <div class="interior">
-        <div>
+ <div class="exterior ">
+    <div class="interior relativa">
+        <div class="box absoluta">
             <p>Absoluto</p>
         </div>
-        <div>
+        <div class="box relativa">
             <p>Relativo</p>
         </div>
-        <div>
+        <div class="box fijo">
             <p>Fixed</p>
         </div>
-        <div>
+        <div class="box sticky">
             <p>Sticky</p>
         </div>
     </div>
  </div>
+
 </body>
 </html>
