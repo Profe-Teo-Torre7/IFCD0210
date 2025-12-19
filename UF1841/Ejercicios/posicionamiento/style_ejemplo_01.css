@@ -1,0 +1,31 @@
+/*Importación del tipo de letra Roboto de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+/*todos los elementos dentro del body heredan el tipo y tamaño de letra*/
+body{
+  font-family: 'Roboto', sans-serif; /*Tipo del letra Roboto*/
+  font-size: 18px;
+}
+.enlace-blue{
+  text-decoration:none;
+  color: #03345c;
+  margin: 8px;
+}
+.espacio{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.caja{
+  width:  64px;               /*ancho*/
+  height: 64px;              /*alto*/
+  background-color: #3eabe6; /*color de fondo*/
+  color: #fff;
+  margin: 8px;
+}
+.caja .tipo{
+  position: static;
+  left: 128px;
+}
+h1{
+  font-size: 30px;
+  text-align:center;
+}

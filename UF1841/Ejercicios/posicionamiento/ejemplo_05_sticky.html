@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body nav {
+            position: sticky;
+            top: 10px;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            display: flex;
+            gap: 16px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+        }
+
+        li a:hover {
+            color: red;
+        }
+
+        section {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            font-size: 50px;
+            font-weight: bold;
+            background: #eee;
+        }
+
+        .banner {
+            padding: 50px;
+            font-size: 60px;
+            font-weight: bold;
+            color: #da2;
+            text-align: center;
+            border-bottom: 1px solid black;
+        }
+
+        body footer {
+            position: sticky;
+            bottom: 10px;
+            height: 32px;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="banner">
+        Banner: Eat more fruit for health
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#apples">Apples</a></li>
+            <li><a href="#oranges">Oranges</a></li>
+            <li><a href="#pears">Pears</a></li>
+        </ul>
+    </nav>
+    <section id="first">Content: header is sticky. Means positioned per normal document flow (relatively positioned),
+        until viewport gets to defined position (e.g. top: 0)</section>
+    <section id="second">Important to understand an element with position:sticky, lives inside a sticky container and
+        floats relative to other elements in the same container</section>
+    <section id="third">Third Section</section>
+
+    <footer>
+        This is a sticky footer
+    </footer>
+</body>
+
+</html>

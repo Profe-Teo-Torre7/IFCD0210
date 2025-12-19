@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caja_static {
+            background-color: #ed8936;
+            color: #fff;
+            width: 256px;
+            /*ancho del elemento*/
+            height: 128px;
+            /*alto del elemento*/
+
+            position: static;
+            /*posicion static o por defecto del elemento*/
+            left: 48px;
+            /*se deplaza de izquierda a derecha 48px*/
+        }
+
+        /*Se aplica ancho al parrafo 1 y ancho y alto parrafo 2*/
+        .caja_relative {
+            background-color: #ed8936;
+            color: #fff;
+            width: 256px;
+            /*ancho del elemento*/
+            height: 128px;
+            /*alto del elemento*/
+
+            position: relative;
+            /*posicion relativa del elemento*/
+            left: 48px;
+            /*se deplaza de izquierda a derecha 48px*/
+            top: 48px;
+            /*se deplaza de arriba a abajo 48px*/
+        }
+
+        /*Se aplica ancho al parrafo 1 y ancho y alto parrafo 2*/
+        .padre_relative {
+            background-color: #e0dcd8;
+            color: #fff;
+            width: autopx;
+            /*ancho del elemento*/
+            height: 128px;
+            /*alto del elemento*/
+            position: relative;
+            /*posicion relativa del elemento*/
+            left: 48px;
+            /*se deplaza de izquierda a derecha 48px*/
+            top: 48px;
+            /*se deplaza de arriba a abajo 48px*/
+        }
+
+        .hijo_absolute1 {
+            background-color: #f56565;
+            color: #fff;
+            padding: 12px;
+            position: absolute;
+            /*posicion absolute del elemento*/
+            left: 80px;
+            /*se deplaza de izquierda a derecha 80px*/
+        }
+
+        .hijo_absolute2 {
+            background-color: #ecc94b;
+            color: #fff;
+            padding: 12px;
+            position: absolute;
+            /*posicion absolute del elemento se sobrepone*/
+            left: 16px;
+            /*se deplaza de izquierda a derecha 48px*/
+        }
+
+        .hijo_fixed {
+            background-color: #f56565;
+            color: #fff;
+            padding: 12px;
+            position: fixed;
+            /*posicion fija del elemento*/
+            left: 80px;
+            /*se deplaza de izquierda a derecha 80px*/
+        }
+
+        .hijo_absolute {
+            background-color: #ecc94b;
+            color: #fff;
+            padding: 12px;
+            position: absolute;
+            /*posicion absolute del elemento se sobrepone*/
+            left: 116px;
+            /*se deplaza de izquierda a derecha 48px*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja_static">
+        Static
+    </div>
+    <!--definimos los elementos en HTML-->
+    <div class="caja_relative">Relative</div>
+    <br><br>
+
+
+    <!--definimos los elementos en HTML-->
+    <div class="padre_relative">
+        <div class="hijo_absolute1">
+            Absolute 1
+        </div>
+        <div class="hijo_absolute2">
+            Absolute 2
+        </div>
+    </div>
+
+ <br><br>
+
+    <!--definimos los elementos en HTML-->
+    <div class="padre_relative">
+        <div class="hijo_fixed">
+            Absolute 1
+        </div>
+        <div class="hijo_absolute">
+            Absolute 2
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

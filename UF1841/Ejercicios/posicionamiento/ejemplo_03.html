@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            margin: 50px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            /* position: fixed; */
+        }
+
+        #main {
+            position: relative;
+            border: red 3px solid;
+            height: 400px;
+            width: 400px;
+        }
+
+        #layer1 {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            height: 300px;
+            width: 300px;
+            background: #ccc
+        }
+
+        #layer2 {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            height: 200px;
+            width: 200px;
+            background: #aaa
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="layer1">
+            <div id="layer2"></div>
+        </div>
+    </div>
+</body>
+
+</html>
