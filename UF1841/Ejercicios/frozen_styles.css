@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Raleway;
+
+}
+
+h1 {
+    font-size: 7rem;
+    font-weight: bold;
+
+
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 2;
+
+}
+
+h5 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+section {
+
+    padding: 7rem 3rem;
+    z-index: 100;
+
+}
+footer{
+     background-color: rgb(0, 0, 0);
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+     height:4rem;
+     color:white;
+     font-size: 2rem;
+}
+.section-1 {
+    background-image: url("fondo_1.webp");
+    border-bottom: 10px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-2 {
+    background-color: #41d1eb;
+    border-bottom: 10px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.section-3 {
+    background-color: whitesmoke;
+    border-bottom: 10px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section-4 {
+    background-image: url("fondo_3.webp");
+    border-bottom: 10px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.section-5 {
+    background-color: rgb(48, 48, 48);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.azul {
+    color: #41d1eb;
+}
+
+.blanco {
+    color: white;
+}
+
+.cabecera {
+    color: white;
+    z-index: 10;
+    position: relative;
+
+}
+
+.fijo {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.7rem;
+    padding: 1rem 0;
+
+
+}
+
+.subr {
+    text-decoration: underline;
+    text-decoration-thickness: 1.1vh;
+    text-decoration-style: solid;
+}
+
+.subr-azul {
+    text-decoration-color: #41d1eb;
+}
+
+.subr-morado {
+    text-decoration-color: #be418c;
+}
+
+.subr-verde {
+    text-decoration-color: greenyellow;
+}
+
+.relativo {
+    position: relative;
+
+
+}
+
+.flecha-abs {
+    background-color: rgba(175, 175, 233, 0.314);
+    border:2px solid black;
+    padding:1rem 0.5rem;
+    border-radius: 10px;
+    font-size: 3rem;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+}
+
+.flecha-abs i {
+    color: black;
+}
+.videos{
+    margin-top: 3rem;
+    display:flex;
+    justify-content: space-around;
+    gap: 10px;
+}
