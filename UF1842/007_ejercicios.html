@@ -90,6 +90,53 @@
             }
             return salida;
         }
+
+        // Ejercicio 5
+        function sumaImpares(numero){
+            let resultado = 0;
+            for(let i = 1; i< numero; i += 2){
+                resultado += i;
+            }
+            return resultado;
+        }
+
+        function sumaImpares2(numero){
+            let resultado = 0;
+            for(let i = 0; i< numero; i ++){
+                if(i % 2 == 1){
+                    resultado += i;
+                }
+            }
+            return resultado;
+        }
+
+        //Ejercicio 6
+        function dosAarrays(lista1,lista2){
+            let salida = [];
+            for(let num of lista1){
+                if(lista2.includes(num) && !salida.includes(num)){
+                    salida.push(num);
+                }
+            }
+            return salida;
+        }
+
+        // Ejercicio 7 98765445454
+        function digitos(numero){
+            return  numero.toString().length;
+        }
+
+        // Ejercicio 8
+
+        function cadenaMayor(cadenas){
+            let salida = '';
+            for(let cadena of cadenas){
+                if(salida.length < cadena.length){
+                    salida = cadena;
+                }
+            }
+            return salida;
+        }
     </script>
 </head>
 <body>
@@ -110,6 +157,18 @@
     </p>
     <p>
         4. Escribe una función que reciba como parámetro un array de números y devuelva otro array que contenga solo los positivos.
+    </p>
+    <p>
+        5. Hacer una función que sume todos los números impares menores a uno dado como parámetro.
+    </p>
+    <p>
+        6. Hacer una función que encuentre los números comunes a dos listas pasadas como parámetros y los devuelva en otra lista.
+    </p>
+    <p>
+        7. Hacer una función que cuente los dígitos de un número
+    </p>
+    <p>
+        8. Hacer una función que devuelva la cadena más larga de las contenidas en un array de cadenas que se pasa como parámetro.
     </p>
 </body>
 </html>
