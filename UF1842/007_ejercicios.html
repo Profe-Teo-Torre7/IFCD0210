@@ -12,11 +12,83 @@
         }
         //console.log(area(6,8));
 
+        // Ejercicio 2
         function tablaMul(factor){
             for(let i = 1; i <= 10; i++){
                 console.log(factor + " * " + i + " = " + factor * i);
             }
-            return 0;
+        }
+
+        // Ejercicio 3
+        function cuentaVocales(cadena){
+            let contador = 0;
+            for(let i = 0; i < cadena.length; i++){
+                switch (cadena[i].toLowerCase()) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        contador ++;
+                        break;
+                }
+            }
+            return contador;
+        }
+
+        function cuentaVocales2(cadena){
+            let contador = 0;
+            let vocales = "aeiouáéíóú";
+            for(let letra of cadena){
+                if(vocales.includes(letra.toLowerCase())){
+                    contador ++;
+                }
+            }
+            return contador;
+        }
+        function cuentaLetras(cadena,vocales){
+            let contador = 0;
+            for(let letra of cadena){
+                if(vocales.includes(letra.toLowerCase())){
+                    contador ++;
+                }
+            }
+            return contador;
+        }
+        function cuentaVocales3(cadena){
+            let contador = [0,0,0,0,0];
+
+            for(let i = 0; i < cadena.length; i++){
+                switch (cadena[i].toLowerCase()) {
+                    case 'a':
+                        contador[0]++;
+                        break;
+                    case 'e':
+                        contador[1]++;
+                        break;                        
+                    case 'i':
+                        contador[2]++;
+                        break;                        
+                    case 'o':
+                        contador[3]++;
+                        break;                        
+                    case 'u':
+                        contador[4]++;
+                        break;                        
+                }
+            }
+            return contador;
+        }           
+        
+        // Ejercicio 4
+        function positivos(lista){
+            let salida = [];
+            for(let i  = 0; i < lista.length; i++){
+                if(lista[i] >= 0){
+                    salida.push(lista[i]);
+                }
+            }
+            return salida;
         }
     </script>
 </head>
@@ -41,3 +113,4 @@
     </p>
 </body>
 </html>
+
