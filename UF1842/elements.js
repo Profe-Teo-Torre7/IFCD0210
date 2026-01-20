@@ -11,3 +11,4 @@ function eliminar() {
     //console.log(li);
     if (li) { padre.removeChild(li) };
 }
+

@@ -1,0 +1,118 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fondo general */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #dfeaf4, #119299);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor principal */
+main {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos */
+h1 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+h2 {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+h3 {
+    margin: 1rem 0;
+    min-height: 1.5em;
+    font-weight: bold;
+}
+
+/* Mensajes de resultado (opcional para JS) */
+.correcto {
+    color: #2ecc71;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    text-align: left;
+    color: #444;
+}
+
+input[type="number"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #4facfe;
+    border-width: 2px;
+}
+
+/* Botones */
+button {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#enviar {
+    background: #4facfe;
+    color: white;
+}
+
+#enviar:hover {
+    background: #3a9be0;
+}
+
+button[onclick="reiniciar()"] {
+    background: #f39c12;
+    color: white;
+}
+
+button[onclick="reiniciar()"]:hover {
+    background: #d68910;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
