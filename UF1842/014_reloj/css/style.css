@@ -33,3 +33,7 @@ border-radius: 10px;
 .div2 { grid-area: 3 / 1 / 4 / 3; }
 .div3 { grid-area: 3 / 3 / 4 / 4; }
 .div4 { grid-area: 3 / 4 / 4 / 6; }
+
+.dia{
+    font-family: 'Courier New', Courier, monospace;
+}

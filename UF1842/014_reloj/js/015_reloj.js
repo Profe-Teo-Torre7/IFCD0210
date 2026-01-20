@@ -37,8 +37,8 @@ function parar(){
 }
 
 function diaSemana(numDia){
-    let semana = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
-    return semana[numDia].toUpperCase();
+    let semana = ['Dom','Lun','Martes','Mié','Jue','Vie','Sáb'];
+    return semana[numDia];
     
 }
 
