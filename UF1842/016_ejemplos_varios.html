@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #scrollbar{
+            position:fixed;
+            top:0;
+            left:0;
+            height: 10px;
+            background-color: aqua;
+            width: 0;
+            z-index: 1;
+        }
+        #gris{
+            position:fixed;
+            top:0;
+            left:0;
+            height: 10px;
+            background-color: rgb(175, 179, 179);
+            width: 100%;   
+                    
+        }
+        .oscuro{
+            background-color: rgb(48, 47, 47);
+            color:whitesmoke;
+
+        }
+        .flecha{
+            width: 50px;
+            height: 40px;
+            background-color: lightgrey;
+            color:whitesmoke;
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            position: fixed;
+            right: 5px;
+            bottom:40px;
+        }
+        .flecha:hover{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="gris"></div>
+    <div id="scrollbar"></div>
+
+    <h2>Barra de progreso con scroll</h2>
+    <button id="btn_tema">Tema Oscuro</button>
+
+    <div class="flecha" onclick="window.scrollTo(0,0)">^</div>
+
+    <div style="height:1100px"></div>
+
+    <script>
+        window.addEventListener('scroll',function(){
+            let scrolled = window.scrollY;
+            let altura = document.body.scrollHeight - window.innerHeight;
+            let porcentaje = scrolled / altura;
+            document.getElementById("scrollbar").style.width = porcentaje * 100 + "%";
+            document.getElementById("gris").style.width = scrolled ? '100%' : '0';
+
+            // Mostrar flecha
+
+            let flecha = document.querySelector('.flecha');
+            if(porcentaje > 0.2){
+                flecha.style.display = "block";
+            }
+            else{
+                flecha.style.display = "none";
+            }
+
+        });
+    </script>
+
+
+    <!-- ************************************************************* -->
+
+    
+
+    <script>
+        const boton = document.getElementById("btn_tema");
+        boton.addEventListener('click',function(){
+            document.body.classList.toggle('oscuro');
+
+            boton.textContent = document.body.classList.contains('oscuro')?'Tema Claro':'Tema Oscuro';
+        })
+    </script>
+
+    <!-- ************************************************* -->
+
+    <script>
+
+    </script>
+</body>
+</html>
