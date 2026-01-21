@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
     <style>
-        *{
-            margin:0;
-            padding:0;
+        html {
+            font-size: 16px;
         }
-        #scrollbar{
-            position:fixed;
-            top:0;
-            left:0;
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #scrollbar {
+            position: fixed;
+            top: 0;
+            left: 0;
             height: 10px;
             background-color: aqua;
             width: 0;
             z-index: 1;
         }
-        #gris{
-            position:fixed;
-            top:0;
-            left:0;
+
+        #gris {
+            position: fixed;
+            top: 0;
+            left: 0;
             height: 10px;
             background-color: rgb(175, 179, 179);
-            width: 100%;   
-                    
-        }
-        .oscuro{
-            background-color: rgb(48, 47, 47);
-            color:whitesmoke;
+            width: 100%;
 
         }
-        .flecha{
+
+        .oscuro {
+            background-color: rgb(48, 47, 47);
+            color: whitesmoke;
+
+        }
+
+        .flecha {
             width: 50px;
             height: 40px;
             background-color: lightgrey;
-            color:whitesmoke;
+            color: whitesmoke;
             font-size: 3rem;
             font-weight: bold;
             text-align: center;
@@ -45,14 +54,15 @@
             border-top-left-radius: 10px;
             position: fixed;
             right: 5px;
-            bottom:40px;
-        }
-        .flecha:hover{
-            cursor: pointer;
+            bottom: 40px;
         }
 
+        .flecha:hover {
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
     <div id="gris"></div>
     <div id="scrollbar"></div>
@@ -60,12 +70,42 @@
     <h2>Barra de progreso con scroll</h2>
     <button id="btn_tema">Tema Oscuro</button>
 
+    <div>
+        <textarea name="" id="cuadro" maxlength="100"></textarea>
+        <p>Utilizados <span id="cuenta">0</span> de 100 caracteres</p>
+        <button id="btnDeshacer">Deshacer</button>
+
+    </div>
+
+
+
+    <div class="contenedor">
+        <div class="tabs">
+            <div class="tab active" data-target="tab1">Pestaña 1</div>
+            <div class="tab" data-target="tab2">Pestaña 2</div>
+            <div class="tab" data-target="tab3">Pestaña 3</div>
+        </div>
+        <!-- Contenidos de las pestañas -->
+         <div class="tab-content active" id ='tab1'>Contenido de la pestaña 1</div>
+         <div class="tab-content" id ='tab2'>Contenido de la pestaña 2</div>
+         <div class="tab-content" id ='tab3'>Contenido de la pestaña 3</div>
+    </div>
+    <script>
+        let tabs = document.querySelectorAll(".tab");
+        let contenidos = document.querySelectorAll(".tab-content");
+
+
+
+    </script>
+
+
+
     <div class="flecha" onclick="window.scrollTo(0,0)">^</div>
 
     <div style="height:1100px"></div>
 
     <script>
-        window.addEventListener('scroll',function(){
+        window.addEventListener('scroll', function () {
             let scrolled = window.scrollY;
             let altura = document.body.scrollHeight - window.innerHeight;
             let porcentaje = scrolled / altura;
@@ -75,10 +115,10 @@
             // Mostrar flecha
 
             let flecha = document.querySelector('.flecha');
-            if(porcentaje > 0.2){
+            if (porcentaje > 0.2) {
                 flecha.style.display = "block";
             }
-            else{
+            else {
                 flecha.style.display = "none";
             }
 
@@ -88,21 +128,42 @@
 
     <!-- ************************************************************* -->
 
-    
+
 
     <script>
         const boton = document.getElementById("btn_tema");
-        boton.addEventListener('click',function(){
+        boton.addEventListener('click', function () {
             document.body.classList.toggle('oscuro');
 
-            boton.textContent = document.body.classList.contains('oscuro')?'Tema Claro':'Tema Oscuro';
+            boton.textContent = document.body.classList.contains('oscuro') ? 'Tema Claro' : 'Tema Oscuro';
         })
     </script>
 
-    <!-- ************************************************* -->
+    <!-- *********************** Cuadro de texto ************************** -->
 
     <script>
+        let cuadroTexto = document.getElementById("cuadro");
+        let cuentaTexto = document.getElementById("cuenta");
+        let historial = [];
 
+        cuadroTexto.addEventListener('input', function () {
+            cuentaTexto.innerHTML = cuadroTexto.value.length;
+            // Deshacer
+            historial.push(cuadroTexto.value);
+
+        });
+
+        let btn_desh = document.getElementById("btnDeshacer");
+        btn_desh.addEventListener('click', function () {
+            historial.pop();
+            //cuadroTexto.value = historial[historial.length -1] || '';
+            cuadroTexto.value = historial.slice(-1) || '';
+            cuentaTexto.innerHTML = cuadroTexto.value.length;
+        })
     </script>
+
+
+
 </body>
+
 </html>
