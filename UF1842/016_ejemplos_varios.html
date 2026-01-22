@@ -9,6 +9,7 @@
     <style>
         html {
             font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         * {
@@ -60,6 +61,53 @@
         .flecha:hover {
             cursor: pointer;
         }
+        /* ********** Tabs ************************************* */
+        .contenedor{
+            margin: 0 auto;
+            width:80%;
+            max-width: 600px;
+            background-color: aliceblue;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.884);
+            overflow:hidden;
+        }
+
+        /* Estilo de los tabs*/
+        .tabs{
+            display: flex;
+            background-color: rgb(84, 129, 242);
+            border-radius: 8px 8px 0 0 ;
+        }
+        .tab{
+            padding:15px;
+            flex:1;
+            text-align: center;
+            background-color: rgb(72, 52, 200);
+            color:whitesmoke;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .tab:hover{
+            background-color: whitesmoke;
+            color: rgb(72, 52, 200);
+        }
+        .tab.active{
+            background-color: rgba(214, 241, 151, 0.555);
+            color: rgb(72, 52, 200);
+        }
+
+        /* Estilos del contenido*/
+        .tab-content{
+            padding:20px;
+            display:none;
+            background-color: whitesmoke;
+            color: #333;
+        }
+
+        .tab-content.active{
+            display:block;
+        }
+
     </style>
 </head>
 
@@ -77,23 +125,33 @@
 
     </div>
 
-
-
     <div class="contenedor">
         <div class="tabs">
-            <div class="tab active" data-target="tab1">Pestaña 1</div>
+            <div class="tab" data-target="tab1">Pestaña 1</div>
             <div class="tab" data-target="tab2">Pestaña 2</div>
             <div class="tab" data-target="tab3">Pestaña 3</div>
         </div>
         <!-- Contenidos de las pestañas -->
-         <div class="tab-content active" id ='tab1'>Contenido de la pestaña 1</div>
-         <div class="tab-content" id ='tab2'>Contenido de la pestaña 2</div>
-         <div class="tab-content" id ='tab3'>Contenido de la pestaña 3</div>
+         <div class="tab-content" id='tab1'>Contenido de la pestaña 1</div>
+         <div class="tab-content" id='tab2'>Contenido de la pestaña 2</div>
+         <div class="tab-content" id='tab3'>Contenido de la pestaña 3</div>
     </div>
     <script>
         let tabs = document.querySelectorAll(".tab");
         let contenidos = document.querySelectorAll(".tab-content");
+        for(let i = 0; i< tabs.length; i++){
+            tabs[i].addEventListener('click', function(){
+                for(let j = 0; j < tabs.length; j++){
+                    tabs[j].classList.remove('active');
+                    contenidos[j].classList.remove('active');
+                }
 
+                this.classList.add('active');
+                let targetId = this.getAttribute('data-target');
+                let targetContent = document.getElementById(targetId);
+                targetContent.classList.add('active');
+            });
+        }
 
 
     </script>
