@@ -44,7 +44,7 @@
             let nombre = productos[i].querySelector('.nombre');
             boton.addEventListener('click',function(){
                 let li = document.createElement('li');
-                li.innerHTML = nombre.textContent + " " + precio +"€";
+                li.innerHTML     = nombre.textContent + " " + precio +"€";
                 lista_carrito.appendChild(li);
                 total.innerHTML = parseFloat(precio) + parseFloat(total.innerHTML);
 
@@ -63,3 +63,5 @@
     </script>
 </body>
 </html>
+
+
