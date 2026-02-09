@@ -13,7 +13,7 @@
         <div class="centrado">
             <div class="cabecera"> <!--  Imágenes -->
                 <div class="imagenes izq">
-                    <a href="#"><img src="{{url_for('static',filename='img/microbit.svg')}}" alt="Microbit"></a>
+                    <a href="{{url_for('hola')}}"><img src="{{url_for('static',filename='img/microbit.svg')}}" alt="Microbit"></a>
                 </div>
                 <div class="imagenes der">
                     <a href="#"><img src="{{url_for('static',filename='img/developer.svg')}}" alt="Developer"></a>
@@ -21,8 +21,8 @@
             </div>
             <nav class="limpiar">
                 <p class="menu">
-                    <a href="#">Software</a>&nbsp;
-                    <a href="#">Firmware</a>&nbsp;
+                    <a href="{{url_for('get_software')}}">Software</a>&nbsp;
+                    <a href="{{url_for('get_firmware')}}">Firmware</a>&nbsp;
                     <a href="#">Hardware</a>&nbsp;
                     <a href="#">Accessories</a>&nbsp;
                     <a href="#">Community</a>&nbsp;
