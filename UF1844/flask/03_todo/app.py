@@ -70,21 +70,15 @@ def completar_tarea(id_tarea):
 def editar_tarea(id_tarea):
     tasks = carga_tareas()
     tarea_sel = ''
-
+    for t in tasks:
+        if t['id'] == id_tarea:
+            tarea_sel = t
+            break
+        
     if request.method == 'POST':
-        for t in tasks:
-            if t['id'] == id_tarea:
-                tarea_sel = t
-                break
         tarea_sel['descripcion'] = request.form['descripcion']
         tarea_sel['fecha_completada'] = None
         guardar_tareas(tasks)
         return redirect(url_for('index'))
 
-        
-
-    for t in tasks:
-        if t['id'] == id_tarea:
-            tarea_sel = t
-            break
     return render_template('edit.html', tarea=tarea_sel)

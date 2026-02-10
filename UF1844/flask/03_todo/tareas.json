@@ -1,13 +1,7 @@
 [
     {
-        "id": 1,
-        "descripcion": "Esta es una prueba",
-        "fecha_alta": "2026-02-10 17:44:41",
-        "fecha_completada": "2026-02-10 17:45:04"
-    },
-    {
         "id": 2,
-        "descripcion": "MODIFICADA",
+        "descripcion": "MODIFICADA 22",
         "fecha_alta": "2026-02-10 17:44:46",
         "fecha_completada": null
     },
