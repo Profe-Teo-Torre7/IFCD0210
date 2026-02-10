@@ -17,13 +17,20 @@ def guardar_tareas(tareas):
     with open(MIS_TAREAS, 'w',encoding='utf-8') as f:
         json.dump(tareas,f, indent=4,ensure_ascii=False)
 
+def nuevo_id():
+    lista_id =[]
+    tasks = carga_tareas()
+    for t in tasks:
+        lista_id.append(t['id'])
+    return max(lista_id,default=0) + 1
+
 @app.route('/', methods=["POST","GET"])
 def index():
     tasks = carga_tareas()
     if request.method == "POST":
         desc = request.form["descripcion"]
         nueva = {
-            "id" : len(tasks) + 1,
+            "id" : nuevo_id(),    #len(tasks) + 1,
             "descripcion": desc,
             "fecha_alta": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "fecha_completada": None
@@ -35,3 +42,49 @@ def index():
     return  render_template("index.html", tareas=tasks)
 
 
+@app.route('/delete/<int:id_tarea>',methods=["POST","GET"])
+def borrar_tarea(id_tarea):
+    tasks = carga_tareas()
+    resto_tareas = []
+    for t in tasks:
+        if t['id'] != id_tarea:
+            resto_tareas.append(t)
+    
+    guardar_tareas(resto_tareas)
+    return redirect(url_for("index"))
+
+
+@app.route('/completar/<int:id_tarea>')
+def completar_tarea(id_tarea):
+    tasks = carga_tareas()
+    
+    for t in tasks:
+        if t['id'] == id_tarea:
+            t['fecha_completada'] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            break
+    guardar_tareas(tasks)
+    return redirect(url_for("index"))
+
+
+@app.route('/edit/<int:id_tarea>',methods=['POST','GET'])
+def editar_tarea(id_tarea):
+    tasks = carga_tareas()
+    tarea_sel = ''
+
+    if request.method == 'POST':
+        for t in tasks:
+            if t['id'] == id_tarea:
+                tarea_sel = t
+                break
+        tarea_sel['descripcion'] = request.form['descripcion']
+        tarea_sel['fecha_completada'] = None
+        guardar_tareas(tasks)
+        return redirect(url_for('index'))
+
+        
+
+    for t in tasks:
+        if t['id'] == id_tarea:
+            tarea_sel = t
+            break
+    return render_template('edit.html', tarea=tarea_sel)

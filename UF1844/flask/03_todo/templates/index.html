@@ -17,7 +17,10 @@
         Tarea nº: {{t.id}} <br>
         Descripción: {{t.descripcion}}<br>
         Fecha alta: {{t.fecha_alta}} <br>
-        Completada: {% if t.fecha_completada %} SI {% else %} NO {% endif %}
+        Completada: {% if t.fecha_completada %} SI {% else %} NO {% endif %}<br>
+        <a href="{{url_for('borrar_tarea', id_tarea=t.id)}}">Eliminar</a><br>
+        <a href="{{url_for('completar_tarea', id_tarea=t.id)}}">Completar</a><br>
+        <a href="{{url_for('editar_tarea', id_tarea=t.id)}}">Editar</a><br>
 
         </li>
         {%endfor%}
