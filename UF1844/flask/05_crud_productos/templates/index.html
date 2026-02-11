@@ -9,7 +9,7 @@
     <h1>Edición de productos</h1>
     <form action="" method="GET">
         <label for="">Producto</label>
-        <select name="producto" >
+        <select name="producto" onchange="this.form.submit()">
             <option value="-1">--Seleccione--</option>
             {% for p in productos %}
             <option value="{{p.id}}">{{p.nombre}}</option>
