@@ -1,0 +1,11 @@
+{
+    "pais": "Argentina",
+    "genero": "Hombre",
+    "hobbies": [
+        "Leer",
+        "Deporte",
+        "Música",
+        "Video juegos",
+        "Viajar"
+    ]
+}

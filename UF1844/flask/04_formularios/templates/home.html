@@ -12,7 +12,9 @@
         <select name="pais" id="" >
             <option value="-">--Seleccione--</option>
             {% for p in paises %}
-            <option value="{{p}}">{{p}}</option>
+            <option value="{{p}}" 
+            {%if estado.get('pais') == p %}selected{%endif%}
+            >{{p}}</option>
             {%endfor%}
         </select>
 
@@ -20,15 +22,24 @@
 
         <label for="">Géneros</label><br>
         {%for g in generos%}
-            <input type="radio" name="genero" value="{{g}}" >{{g}}<br>
+            <input type="radio" name="genero" value="{{g}}" 
+            {%if estado.get('genero') == g%}checked{%endif%}
+            >{{g}}<br>
         {%endfor%}
 
         <br><br>
 
         <label for="">Hobbies</label><br>
         {%for h in hobbies%}
-            <input type="checkbox" name="hobbies" value="{{h}}">{{h}} <br>
+            <input type="checkbox" name="hobbies" value="{{h}}" 
+            {%if h in estado.get('hobbies',[])%} checked{%endif%}
+            >{{h}} <br>
         {%endfor%}
+
+        <button type="submit">Guardar</button>
+        
     </form>
+    
+    <button onclick="window.location.href='{{url_for('cargar')}}'">Cargar</button>
 </body>
 </html>
