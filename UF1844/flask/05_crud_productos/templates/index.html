@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edición de productos</title>
+</head>
+<body>
+    <h1>Edición de productos</h1>
+    <form action="" method="GET">
+        <label for="">Producto</label>
+        <select name="producto" >
+            <option value="-1">--Seleccione--</option>
+            {% for p in productos %}
+            <option value="{{p.id}}">{{p.nombre}}</option>
+            {%endfor%}
+        </select>
+    </form>
+</body>
+</html>
