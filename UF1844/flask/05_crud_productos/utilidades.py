@@ -6,7 +6,7 @@ def cargar_datos(archivo):
     
 def guardar_datos(archivo, datos):
     with open(archivo, 'w', encoding='utf-8') as f:
-        json.dump(datos,archivo, indent=4,ensure_ascii=False)
+        json.dump(datos,f, indent=4,ensure_ascii=False)
 
 
 def nuevo_id(archivo_prods):
@@ -16,5 +16,5 @@ def nuevo_id(archivo_prods):
     for p in prods:
         lista_ids.append(p['id'])
         
-    return max(lista_ids) + 1
+    return max(lista_ids,default=0) + 1
 
