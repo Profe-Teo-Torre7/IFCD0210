@@ -26,7 +26,6 @@ def login_required(func):
 
 @app.route('/')
 def index():
-    return redirect(url_for('registrar'))
     if 'user_id' in session:
         return redirect(url_for('principal'))
     return redirect(url_for('login'))
@@ -60,13 +59,29 @@ def registrar():
     return render_template('registrar.html')
 
 @app.route('/principal')
+@login_required
 def principal():
-    pass
+    return render_template('principal.html')
 
-@app.route('/login')
+@app.route('/login', methods=['POST','GET'])
 def login():
-    pass
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        usuario = util.buscar_usuario(USUARIOS,username)
+
+        if not usuario or not check_password_hash(usuario['password'],password):
+            flash("Usuario o clave incorrecta")
+            return redirect(url_for('login'))
+        
+        session['username'] = usuario['username']
+        session['id'] = usuario['id']
+        return redirect(url_for('principal'))
+    return redirect(url_for('login'))
 
 @app.route('/logout')
+@login_required
 def logout():
-    pass
+    session.clear()
+    return redirect(url_for('login'))
