@@ -1,0 +1,7 @@
+[
+    {
+        "id": 1,
+        "username": "Teo",
+        "password": "scrypt:32768:8:1$xET4svclRiPHobtm$112e4e2d9b4d2c9ba7549ab472634f1a59ddd94c0b5b99d3f23b7ced182267aae4f2d8e3188b23643454e3c20690b2f55c602f5ea70db9e7bcbc719edac8d15a"
+    }
+]
