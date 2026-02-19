@@ -7,7 +7,7 @@
 </head>
 <body>
     {% if session.username %}
-        <a href="{{url_for('logout')}}">Logout</a>
+        <a href="{{url_for('salir')}}">Logout</a>
     {%endif%}
     {% with mensajes = get_flashed_messages() %}
         {% if mensajes %}

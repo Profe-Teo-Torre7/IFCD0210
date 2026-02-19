@@ -58,6 +58,8 @@ def registrar():
     
     return render_template('registrar.html')
 
+
+
 @app.route('/principal')
 @login_required
 def principal():
@@ -76,12 +78,16 @@ def login():
             return redirect(url_for('login'))
         
         session['username'] = usuario['username']
-        session['id'] = usuario['id']
+        session['user_id'] = usuario['id']
         return redirect(url_for('principal'))
-    return redirect(url_for('login'))
+    return render_template('login.html')
 
-@app.route('/logout')
 @login_required
-def logout():
+@app.route('/salir')
+def salir():
     session.clear()
     return redirect(url_for('login'))
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

@@ -3,5 +3,20 @@
         "id": 1,
         "username": "Teo",
         "password": "scrypt:32768:8:1$xET4svclRiPHobtm$112e4e2d9b4d2c9ba7549ab472634f1a59ddd94c0b5b99d3f23b7ced182267aae4f2d8e3188b23643454e3c20690b2f55c602f5ea70db9e7bcbc719edac8d15a"
+    },
+    {
+        "id": 2,
+        "username": "uno",
+        "password": "scrypt:32768:8:1$1cgc8k4LqHSd39UI$55582502a2c543831cbe34fc266a6e2af46730643e8d374a6ceaa1a020229fd417db5c9624c16138767c45bf8096da79909f70a94c36e88514b3dd6b007c820f"
+    },
+    {
+        "id": 3,
+        "username": "dos",
+        "password": "scrypt:32768:8:1$0BZI7nYczb4XI975$599cb5f24024e28d6faa0e421f76f7d32fe7cdea11ec93a928ca47f89f528e5e863763922cae31c12102b2bc12b4a2aeac298243dceaeba06fc7caa0f045fa3c"
+    },
+    {
+        "id": 4,
+        "username": "tres",
+        "password": "scrypt:32768:8:1$DDC6nZevJCTKZ5EP$d338a269d955d882119a00766da00f78f305c2df3776e4488bcd48c5fcc6f6b02b20e0a8cbc261b4d2d15745e05b270435ba9aadc494fa1e74c657b0168db374"
     }
 ]
