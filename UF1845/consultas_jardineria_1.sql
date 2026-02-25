@@ -418,7 +418,23 @@ order by
 	
 	
 -- 10. Calcula el número de clientes que no tiene asignado representante de ventas.
+	
+	
+	
 -- 11. Calcula la fecha del primer y último pago realizado por cada uno de los clientes. El listado deberá mostrar el nombre y los apellidos de cada cliente.
+	
+	select 
+	min(p.fecha_pago ) as minimo,
+	max(p.fecha_pago ) as maximo,
+	sum(p.total ) as importe,
+	c.nombre_cliente 
+	from cliente c 
+	join pago p 
+	on c.codigo_cliente = p.codigo_cliente
+	group by c.nombre_cliente 
+	
+	
+	
 -- 12. Calcula el número de productos diferentes que hay en cada uno de los pedidos.
 -- 13. Calcula la suma de la cantidad total de todos los productos que aparecen en cada uno de los pedidos.
 
