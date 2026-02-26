@@ -69,3 +69,7 @@ def editar(id):
     
     conn.close()
     return render_template('editar.html', prod=producto)
+
+@app.post('/borrar/<int:id>')
+def borrar(id):
+    pass
