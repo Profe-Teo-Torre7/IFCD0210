@@ -70,6 +70,34 @@ def editar(id):
     conn.close()
     return render_template('editar.html', prod=producto)
 
+# Borrar
 @app.post('/borrar/<int:id>')
 def borrar(id):
-    pass
+    conn = get_conection()
+    conn.execute("delete from producto where id=?",(id,))
+
+    conn.commit()
+    conn.close()
+    return redirect(url_for('index'))
+
+# Insertar
+
+@app.route('/crear', methods=['POST','GET'])
+def crear():
+    if request.method == 'POST':
+        codigo = request.form['codigo']
+        nombre = request.form['nombre']
+        precio = request.form['precio']
+        cantidad = request.form['cantidad']
+        fecha_caducidad = request.form['fecha_caducidad']
+
+        conn = get_conection()
+        conn.execute('''insert into producto(codigo,nombre,precio,cantidad,fecha_caducidad)
+                    values (?,?,?,?,?)''',
+                    (codigo,nombre,precio,cantidad,fecha_caducidad))
+        
+        conn.commit()
+        conn.close()
+        return redirect(url_for('index'))
+    
+    return render_template('crear.html')
