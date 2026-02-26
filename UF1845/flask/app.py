@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect, url_for
+from flask import Flask,render_template,request,redirect, url_for,send_from_directory
 import sqlite3
 
 app = Flask(__name__)
@@ -101,3 +101,14 @@ def crear():
         return redirect(url_for('index'))
     
     return render_template('crear.html')
+
+@app.route('/upload', methods=['POST'])
+def upload_file():
+    file = request.files['file']
+    file.save('archivos/' + file.filename)
+    file_url = url_for('uploaded_file',filename=file.filename, _external=True)
+    return f'Archivo subido correctamente <br> Enlace: <a href="{file_url}">{file_url}</a>'
+
+@app.route('/archivos/<filename>')
+def uploaded_file(filename):
+    return send_from_directory('archivos',filename)
