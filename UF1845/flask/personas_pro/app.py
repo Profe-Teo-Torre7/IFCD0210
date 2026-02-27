@@ -93,11 +93,11 @@ def crear():
                 (nombre, apellido1, apellido2, dni, fecha_nacimiento, foto)
                 VALUES (?, ?, ?, ?, ?, ?)
             """, (form_data["nombre"],
-                  form_data["apellido1"],
-                  form_data["apellido2"],
-                  form_data["dni"],
-                  form_data["fecha_nacimiento"],
-                  filename))
+                form_data["apellido1"],
+                form_data["apellido2"],
+                form_data["dni"],
+                form_data["fecha_nacimiento"],
+                filename))
             conn.commit()
             conn.close()
 
