@@ -39,4 +39,9 @@
 
         {%endfor%}
     </table>
+    <h2>Subir archivo</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="">
+        <input type="submit" value="Subir">
+    </form>
 {%endblock%}
