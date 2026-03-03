@@ -68,6 +68,29 @@ delimiter ;
 
 call oficina_ciudad();
 
+-- ------------------
+drop procedure if exists oficina_ciudad_pais;
+
+delimiter $$
+
+create procedure oficina_ciudad_pais(v_pais varchar(50), out ok varchar(50))
+begin
+	select o.codigo_oficina , o.ciudad 
+	from oficina o 
+	where o.pais = v_pais;
+	
+	set ok = "Todo perfecto";
+
+end $$
+
+delimiter ;
+
+
+call oficina_ciudad_pais('España', @resultado);
+
+select @resultado;
+
+
 
 
 
