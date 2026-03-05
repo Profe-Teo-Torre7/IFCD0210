@@ -97,7 +97,7 @@ call contar_gama("Frutales")
 -- 4. Hacer un procedimiento que inserte una nueva gama de producto, 
 -- de forma que si ya existe una gama con la misma PK sedebe cancelar 
 -- la opearción y devolver un mensaje de error. Si funciona devolver OK.
-
+/*
 drop procedure if exists ins_gama_producto;
 
 delimiter $$
@@ -133,4 +133,41 @@ end $$
 delimiter ;
 
 call ins_gama_producto('Yerbas',null,null,null);
+*/
+
+-- 5. Hacer un procedimiento que dado un cliente devuelva 
+-- el importe medio de sus pedidos.
+
+drop procedure if exists importe_medio;
+
+delimiter $$
+
+create procedure importe_medio(v_cod_cliente int)
+begin
+select 
+	avg(dp.cantidad * dp.precio_unidad ) as promedio
+	from pedido p 
+	join detalle_pedido dp 
+	on p.codigo_pedido = dp.codigo_pedido
+	where p.codigo_cliente = v_cod_cliente;
+
+end $$
+
+delimiter ;
+
+call importe_medio(1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
