@@ -280,5 +280,3 @@ call porcentaje_cliente(1)
 
 
 
-
-
