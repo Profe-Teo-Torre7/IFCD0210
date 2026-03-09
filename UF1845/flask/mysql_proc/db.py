@@ -27,7 +27,9 @@ def ejecutar_sql(sql_command,*args):
 
 def prueba():
 
-    resultado = ejecutar_sql('call contar_gama(%s)',('Frutales',))
+    #resultado = ejecutar_sql('call contar_gama(%s)',('Frutales',))
+    resultado = ejecutar_sql(
+        'select * from producto where codigo_producto=%s',(11679,))
 
     for fila in resultado:
         print(fila)
