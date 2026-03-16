@@ -7,7 +7,7 @@ usuarios = {
     2: {"nombre": "Ana", "edad": 22}
 }
 
-@app.route('/usuarios/<int:id_usuario>')
+@app.route('/usuarios/<int:id_usuario>') 
 def obtener_usr(id_usuario):
     usuario = usuarios.get(id_usuario)
     return jsonify(usuario)

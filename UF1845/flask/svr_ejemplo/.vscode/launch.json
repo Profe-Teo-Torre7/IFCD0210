@@ -12,7 +12,8 @@
             "module": "flask",
             "env": {
                 "FLASK_APP": "app.py",
-                "FLASK_DEBUG": "1"
+                "FLASK_DEBUG": "1",
+                "FLASK_RUN_PORT": "3000"
             },
             "args": [
                 "run",
