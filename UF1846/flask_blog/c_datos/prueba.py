@@ -10,8 +10,30 @@ usr = {'nombre':'Teo',
 #resp = requests.post('http://127.0.0.1:5000/data/user',json=usr)
 #print(resp)
 
-resp = requests.get(
+#resp = requests.get(
     'http://127.0.0.1:5000/data/user/by-email',
     params={'email':'nada@nada.es'})
 
-print(resp.content.decode("utf-8"))
+#print(resp.content.decode("utf-8"))
+"""
+post={
+    'titulo':'Prueba de post',
+    'contenido':'Hola Mundo',
+    'id_autor':1,
+    'estado':'borrador'
+
+}
+curl -X POST http://127.0.0.1:5000/data/post -H 'Content-Type: application/json' -d "{'titulo':'Prueba de post','contenido':'Hola Mundo','id_autor':1,'estado':'borrador'
+}"
+
+curl -X POST http://127.0.0.1:5000/data/post -d "{\"titulo\":\"Prueba de post\",\"contenido\":\"Hola Mundo\",\"id_autor\":1,\"estado\":\"borrador\"}"
+
+
+curl -X POST -H "Content-Type: application/json" -d "{\"titulo\":\"Prueba de post\",\"contenido\":\"Hola Mundo\",\"id_autor\":1,\"estado\":\"borrador\"}" http://127.0.0.1:5001/data/post
+"""
+# Lo anterior no funciona en windows.
+# Esto sí:
+Invoke-RestMethod -Uri "http://127.0.0.1:5001/data/post" `
+-Method POST `
+-Headers @{ "Content-Type" = "application/json" } `
+-Body '{"titulo":"Prueba de post","contenido":"Hola Mundo","id_autor":1,"estado":"borrador"}'
