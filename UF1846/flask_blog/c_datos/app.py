@@ -63,3 +63,47 @@ def create_user():
         )
     return jsonify({'id':user_id})
 
+# ---------------------------------
+# POSTS
+
+#Obtener todos
+@app.route('/data/posts')
+def get_posts():
+    posts = fetch_all("select * from posts")
+    return jsonify(posts)
+
+#Obtener uno
+@app.route('/data/post/<int:post_id>')
+def get_post(post_id):
+    post = fetch_one("select * from posts where id=%s",(post_id,))
+    return jsonify(post)
+
+#Crear un post
+@app.route('/data/post',methods=['POST'])
+def create_post():
+    data = request.json
+    post_id = execute(
+        "insert into posts(id_autor, titulo, contenido,estado) values(%s,%s,%s,%s)",
+        (data['id_autor'],data['titulo'],data['contenido'],data['estado'])
+    )
+    return jsonify({'id':post_id})
+
+#Actualizar post
+@app.route('/data/post/<int:post_id>',methods=['PUT'])
+def update_post(post_id):
+    data = request.json
+    execute('update posts set titulo=%s, contenido=%s, estado=%s where id=%s',
+            (data['titulo'],data['contenido'],data['estado'],post_id))
+    return jsonify({'mensaje':'Post actualizado con éxito.'})
+
+
+#Eliminar post
+@app.route('/data/post/<int:post_id>',methods=['DELETE'])
+def delete_post(post_id):
+    execute('delete from posts where id = %s',(post_id,))
+    return jsonify({'mensaje':'Post borrado.'})
+
+# --------------------------------------------------------
+
+if __name__ == '__main__':
+    app.run(port=5001, debug=True)
