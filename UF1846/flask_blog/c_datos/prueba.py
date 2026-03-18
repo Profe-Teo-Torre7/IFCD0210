@@ -17,10 +17,10 @@ usr = {'nombre':'Teo',
 #print(resp.content.decode("utf-8"))
 """
 post={
-    'titulo':'Prueba de post',
-    'contenido':'Hola Mundo',
-    'id_autor':1,
-    'estado':'borrador'
+    "titulo":"POST MODIFICADO",
+    "contenido":"Hola Mundo",
+    "id_autor":1,
+    "estado":"borrador"
 
 }
 curl -X POST http://127.0.0.1:5000/data/post -H 'Content-Type: application/json' -d "{'titulo':'Prueba de post','contenido':'Hola Mundo','id_autor':1,'estado':'borrador'
@@ -33,7 +33,6 @@ curl -X POST -H "Content-Type: application/json" -d "{\"titulo\":\"Prueba de pos
 """
 # Lo anterior no funciona en windows.
 # Esto sí:
-Invoke-RestMethod -Uri "http://127.0.0.1:5001/data/post" `
--Method POST `
--Headers @{ "Content-Type" = "application/json" } `
--Body '{"titulo":"Prueba de post","contenido":"Hola Mundo","id_autor":1,"estado":"borrador"}'
+Invoke-RestMethod -Uri "http://127.0.0.1:5001/data/post" -Method POST -Headers @{ "Content-Type" = "application/json" } -Body '{"titulo":"Prueba de post","contenido":"Hola Mundo","id_autor":1,"estado":"borrador"}'
+
+Invoke-RestMethod -Uri "http://127.0.0.1:5001/data/post/1" -Method PUT -Headers @{ "Content-Type" = "application/json" } -Body '{"titulo":"POST MODIFICADO","contenido":"Hola Mundo","id_autor":1,"estado":"borrador"}'
