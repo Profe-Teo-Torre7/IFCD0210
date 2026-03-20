@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,abort
 import requests
 
 app = Flask(__name__)
@@ -12,14 +12,31 @@ def get_posts_all():
     return requests.get(f"{API}/posts_all").json()
 
 def get_post(post_id):
-    return requests.get(f"{API}/post/{post_id}").json()
+    resp = requests.get(f"{API}/post/{post_id}")
+    if resp.status_code == 404:
+        return None
+    
+    return resp.json()
 
 # ------------------------------------------
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'),404
+
 
 @app.route('/')
 def home():
     entradas = get_posts()
     return render_template('home.html',posts=entradas)
+
+@app.route('/post/<int:post_id>')
+def post_detail(post_id):
+    entrada = get_post(post_id)
+    if entrada is None:
+        abort(404)
+    return render_template('post.html',post=entrada)
+
 
 
 # --------------------------------------------
