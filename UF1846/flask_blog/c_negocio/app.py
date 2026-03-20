@@ -48,7 +48,7 @@ def validar_post(data):
 @app.route("/api/login",methods=['POST'])
 def login():
     data = request.json
-
+    
     user = get_user_by_email(data['email'])
     if not user:
         return jsonify({'error':'El usuario no existe.'}),401
@@ -58,7 +58,7 @@ def login():
     
     return jsonify(
         {'mensaje': "Login correcto.",
-        'user_id':user['id'],
+        'id':user['id'],
         'rol': user['rol']}
     )
 

@@ -1,7 +1,8 @@
-from flask import Flask,render_template,abort
+from flask import Flask,render_template,abort,request,session,redirect,flash
 import requests
 
 app = Flask(__name__)
+app.secret_key = "supersecreto"
 
 API = "http://127.0.0.1:5002/api"
 
@@ -17,6 +18,9 @@ def get_post(post_id):
         return None
     
     return resp.json()
+
+def is_admin():
+    return session.get('rol') == 'admin'
 
 # ------------------------------------------
 
@@ -36,6 +40,38 @@ def post_detail(post_id):
     if entrada is None:
         abort(404)
     return render_template('post.html',post=entrada)
+
+@app.route('/login',methods=['POST','GET'])
+def login():
+    if request.method == 'POST':
+        data = {
+            'email':request.form['email'],
+            'password': request.form['password']
+        }
+        
+        response = requests.post(f"{API}/login",json=data)
+
+        if response.status_code == 200:
+            user = response.json()
+            session['user_id'] = user['id']
+            session['rol'] = user['rol']
+            return redirect('/admin')
+        else:
+            flash('Credenciales incorrectas.')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect('/')
+
+@app.route('/admin')
+def admin():
+    if not is_admin():
+        return redirect('/login')
+    
+    entradas = get_posts_all()
+    return render_template('admin.html',posts=entradas)
 
 
 

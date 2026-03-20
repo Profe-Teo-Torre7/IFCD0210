@@ -45,6 +45,8 @@ def execute(query, params=None):
 @app.route('/data/user/by-email')
 def get_user_by_email():
     email = request.args.get('email')
+    # c = f"select * from usuarios where email = '{email}'"
+    # print(c)
     user = fetch_one("select * from usuarios where email = %s", (email,))
     return jsonify(user)
 
