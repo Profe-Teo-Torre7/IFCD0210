@@ -36,7 +36,7 @@ def delete_post_db(post_id):
     resp = requests.delete(f"{RUTA_DATOS}/post/{post_id}")
 
 def validar_post(data):
-    required = ['titulo','contenido','id_autor','estado']
+    required = ['titulo','contenido','estado']
     for campo in required:
         if not campo in data:
             return False
@@ -87,8 +87,8 @@ def get_posts_all():
 @app.route('/api/post/<int:post_id>')
 def get_post(post_id):
     post = get_post_db(post_id)
-    if not post or post['estado'] != 'publicado':
-        return jsonify({'error':'No encontrado'}),404
+    # if not post or post['estado'] != 'publicado':
+    #     return jsonify({'error':'No encontrado'}),404
     
     return jsonify(post)
 
@@ -113,6 +113,7 @@ def create_post():
 @app.route('/api/post/<int:post_id>' , methods=['PUT'])
 def update_post(post_id):
     data = request.json
+    print(data)
     if validar_post(data):
         update_post_db(post_id,data)
         return jsonify({'mensaje':'Post actualizado.'})
