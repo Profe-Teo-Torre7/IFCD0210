@@ -1,0 +1,9 @@
+services:
+  servidor-html:
+    container_name: alfonso_svr
+    #image: servidor-html
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - "C:/Users/Alumnos Tarde/Desktop/TEO_IFCD_0210/IFCD0210/MF0493/compose_alfonso:/data"
