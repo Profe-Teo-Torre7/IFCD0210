@@ -6,11 +6,21 @@
     "configurations": [
         
         {
-            "name": "Depurador de Python: Archivo actual",
+            "name": "Depurador de Python: Flask",
             "type": "debugpy",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal"
+            "module": "flask",
+            "env": {
+                "FLASK_APP": "examen_mj_tareas\\app.py",
+                "FLASK_DEBUG": "1"
+            },
+            "args": [
+                "run",
+                "--no-debugger",
+                "--no-reload"
+            ],
+            "jinja": true,
+            "autoStartBrowser": false
         }
     ]
 }
