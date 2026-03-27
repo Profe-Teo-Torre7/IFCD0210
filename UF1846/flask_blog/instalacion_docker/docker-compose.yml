@@ -1,0 +1,31 @@
+#version '3.8'
+
+services:
+  front:
+    build: ./front
+    container_name: blog_front
+    ports:
+      - 5000:5000
+    depends_on:
+      - negocio
+    environment:
+      - API=http://negocio:5002/api
+  
+  negocio:
+    build: ./negocio
+    container_name: blog_negocio
+    ports:
+      - 5002:5002
+    depends_on:
+      - datos
+    environment:
+      - DATOS=http://datos:5001/data
+    
+  datos:
+    build: ./datos
+    container_name: blog_datos
+    ports:
+      - 5001:5001
+    
+
+

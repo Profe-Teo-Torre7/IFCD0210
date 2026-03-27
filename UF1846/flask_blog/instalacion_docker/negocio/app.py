@@ -1,10 +1,11 @@
 import requests
 from flask import Flask,request,jsonify
 from werkzeug.security import generate_password_hash,check_password_hash
+import os
 
 app = Flask(__name__)
 
-RUTA_DATOS = 'http://localhost:5001/data'
+RUTA_DATOS = os.environ['DATOS'] #'http://localhost:5001/data'
 
 # ----------------------------
 
@@ -128,4 +129,4 @@ def delete_post(post_id):
 
 #------------------------------------------------
 if __name__ == '__main__':
-    app.run(port=5002,debug=True)
+    app.run(host='0.0.0.0', port=5002)
